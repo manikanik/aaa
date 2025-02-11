@@ -3,32 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Counter</title>
+    <style>
+        body{
+            height: 100%;
+            background: linear-gradient(135deg, #a7eee2, #f18cd0);
+
+            display: grid;
+            place-items: center;
+        }
+        .a1{
+            padding: 3px;
+            width: max-content;
+            height: max-content;
+
+            border: 3px solid #09a0e6;
+            border-radius: 15px;
+
+            font-size: 70pt;
+            font-weight: bold;
+
+            background: linear-gradient(135deg,#fa00bb,#048b04);
+            background-clip: text;
+            color: transparent;
+
+
+            
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .a2{
+            padding: 50px;
+            width: 80vw;
+            height: 60vh;
+            cursor: pointer;
+
+            border: 3px solid red;
+            border-radius: 50px;
+
+            background: linear-gradient(135deg, #f70052, #00ff00,#f80021);
+        }
+    </style>
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" class="calculator-screen" value="" disabled />
-        <div class="calculator-keys">
-            <button type="button" class="operator" value="+">+</button>
-            <button type="button" class="operator" value="-">-</button>
-            <button type="button" class="operator" value="*">&times;</button>
-            <button type="button" class="operator" value="/">&divide;</button>
-            <button type="button" value="7">7</button>
-            <button type="button" value="8">8</button>
-            <button type="button" value="9">9</button>
-            <button type="button" value="4">4</button>
-            <button type="button" value="5">5</button>
-            <button type="button" value="6">6</button>
-            <button type="button" value="1">1</button>
-            <button type="button" value="2">2</button>
-            <button type="button" value="3">3</button>
-            <button type="button" value="0">0</button>
-            <button type="button" class="decimal" value=".">.</button>
-            <button type="button" class="all-clear" value="all-clear">AC</button>
-            <button type="button" class="equal-sign" value="=">=</button>
-        </div>
+    <div class="a1" id="b1">
+        0
+    </div><br>
+    <div class="a2" id="b2">
+        
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        const b1 = document.getElementById('b1');
+        const b2 = document.getElementById('b2');
+
+        let x = 0;
+
+        b2.onclick = function(){
+            x++;
+            b1.innerText = x;
+        }
+    </script>
 </body>
 </html>
